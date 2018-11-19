@@ -1,19 +1,16 @@
-# slack_presence
+# slack status
 
-`🚪 🏃 || 🎾 💻`
-
-Set yourself here or away across multiple Slack teams
+Persist status across all your Slack workspaces
 
 ## Why
 
-Sometimes it's nice to flip yourself to away when you want to go dark and work on a project but keep Slack open in the background. When you're on multiple teams doing that on a team by team basis is tedious.
+If you work or chat across multiple Slack workspaces, managing your status across each workspace individually is tedious. This replicates your status across all workspaces you define.
 
 ## How
 
-Create a `.env` file with a slack token for each team you are on as comma separated values:
+    cp tokens.example tokens
+    cp statuses.example statuses
 
-```
-SLACK_TOKENS=xoxp-XXXXXXXXXX-XXXXXXXXXX-XXXXXXXXXXX-XXXXXXXXXX,xoxp-YYYYYYYYYY-YYYYYYYYYY-YYYYYYYYYYY-YYYYYYYYYY,xoxp-ZZZZZZZZZZ-ZZZZZZZZZZZ-ZZZZZZZZZZZ-ZZZZZZZZZZ
-```
+Edit and replace your `tokens` file values with [actual tokens](https://api.slack.com/custom-integrations/legacy-tokens) and edit and replace your `statuses` file with your own status messages and emoji.
 
-Run `ruby slack_presence.rb <away|auto>`
+    ruby status.rb here|away meeting|busy
