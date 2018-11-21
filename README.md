@@ -14,3 +14,7 @@ If you work or chat across multiple Slack workspaces, managing your status acros
 Edit and replace your `tokens` file values with [actual tokens](https://api.slack.com/custom-integrations/legacy-tokens) and edit and replace your `statuses` file with your own status messages and emoji.
 
     ruby status.rb here|away meeting|busy
+
+## Miscellaneous
+
+🎩 if you [Alfred](https://www.alfredapp.com/) (and why _wouldn't_ you?), [here's a :gift:](https://github.com/ocxo/slack_status_alfred)
