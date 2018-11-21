@@ -13,12 +13,13 @@ if ARGV[1]
   status_text, status_emoji = status.first
 else
   status = statuses.select{|k| k["Default"]}
-  status_text, status_emoji = status.first
+  status_text = ""
+  status_emoji = status["Default"]
 end
 
 status_payload = {
   "status_text": status_text,
-  "status_emoji": statuses[status_text],
+  "status_emoji": status_emoji,
   "status_expiration": 0
 }.to_json
 
